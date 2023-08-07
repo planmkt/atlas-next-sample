@@ -1,0 +1,36 @@
+@use '@/styles/variables' as vars;
+
+.title {
+  color: vars.$blue_light;
+  font-size: vars.$fz_xl;
+  font-weight: 600;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .text {
+    color: vars.$blue_intermediate;
+    font-size: vars.$fz_xl;
+    font-weight: 700;
+  }
+
+  .button {
+    background: vars.$blue_intermediate;
+    color: white;
+    font-size: vars.$fz_df;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 7px 20px;
+    border-radius: 8px;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+}
