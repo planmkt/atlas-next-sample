@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Portal Atlas](./public/site/images/logo_footer.png)
 
-## Getting Started
+Esse projeto servirá de base para os futuros sites da Atlas, que serão desenvolvidos em Next.js.
 
-First, run the development server:
+## Inicialização:
+
+Após realizar o clone do projeto e instalar as dependências (npm install ou yarn), certifique-se de ter copiado o arquivo env.example para um novo arquivo chamado env.local. 
+Obs: A versão do Node utilizada atualmente é a 18.13.0.
+
+## Para rodar o projeto:
 
 ```bash
 npm run dev
-# or
+```
+ou
+```bash
 yarn dev
-# or
+```
+ou
+```bash
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O projeto estará rodando na porta 3000 e pode ser acessado em [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Utilização como template:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Para utilizar o projeto como template, basta executar o comando create para um projeto Next.js, utilizando a flag -e (example), seguida da URL do repositório template (https://github.com/planmkt/atlas-next-sample.git). Isso fará com que todas as configurações do template atual sejam copiadas para o novo projeto, evitando retrabalho.
 
-## Learn More
+**Exemplos do comando de create:**
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx create-next-app [nome-do-projeto] -e https://github.com/planmkt/atlas-next-sample.git
+```
+ou
+```bash
+yarn create next-app [nome-do-projeto] -e https://github.com/planmkt/atlas-next-sample.git
+```
+ou
+```bash
+pnpm create next-app [nome-do-projeto] -e https://github.com/planmkt/atlas-next-sample.git
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Documentação da ferramenta:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Para mais informações sobre desenvolvimento e configuração de projetos em Next.js, consulte as principais documentações:
 
-## Deploy on Vercel
+- [Sobre o React](https://react.dev/learn)
+- [Documentação do React](https://react.dev/reference/react);
+- [Sobre o next](https://nextjs.org/learn/foundations/about-nextjs)
+- [Documentação do next.js](https://nextjs.org/docs);
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Bibliotecas já configuranas no template:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [reduxjs/toolkit](https://redux-toolkit.js.org/) - Para o gerenciamento de estados;
+- [redux-saga](https://redux-saga.js.org/) - Para o gerenciamento de requisições assíncronas;
+- [axios](https://axios-http.com/ptbr/docs/intro) - Para as chamadas HTTP da API;
+- [lucide-react](https://lucide.dev/) - Biblioteca de ícones que podem ser úteis no layout;
+- [moment.js](https://momentjs.com/) - Para a manipulação e formatação de datas;
+- [sass](https://sass-lang.com/) - Para a estilização;
+- [react-form-hook](https://www.react-hook-form.com/) - Para o gerenciamento de formulários;
+- [react-tostify](https://fkhadra.github.io/react-toastify/introduction) - Para a exibição de erros e exceções;
+- [tailwindcss](https://tailwindcss.com/) - Para a estilização.
+
+Boas práticas:
+- Os componentes serão desenvolvidos seguindo os conceitos do composition pattern;
+- Busque configurações de "format on save" com o eslint e editorconfig em sua IDE para manter o código organizado e evitar problemas com conflitos de merge;
+- Evite a utilização do tipo "any" em suas implementações;
+- Respeite a configuração de pastas e a organização do projeto, dando prioridade à criação de services e hooks personalizados (com exceção dos server components);
+- Sempre busque modularizar a estilização, evitando classes globais, a menos que sejam estritamente necessárias.
+
