@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { toast } from 'react-toastify'
 
 import moment from 'moment'
 
@@ -19,24 +20,28 @@ const useHome = function () {
 
   const [user, setUser] = useState<UserPrps>()
   const [showModal, setShowModal] = useState(false)
-  const [userId, setUserId] = useState('')
 
-  async function handleGetUser() {
-    const data = await getUser(userId)
-    const userData: UserPrps = {
-      name: data.name,
-      login: data.login,
-      avatar_url: data.avatar_url,
-      html_url: data.html_url,
-      created_at: moment(data.created_at).format('DD/MM/YYYY')
+  async function handleGetUser(formData: { search: string }) {
+    try {
+      const data = await getUser(formData.search)
+      const userData: UserPrps = {
+        name: data.name,
+        login: data.login,
+        avatar_url: data.avatar_url,
+        html_url: data.html_url,
+        created_at: moment(data.created_at).format('DD/MM/YYYY')
+      }
+
+      setUser(userData)
+      setShowModal(true)
     }
-
-    setUser(userData)
-    setShowModal(true)
+    catch (error) {
+      toast.error('Usuário não encontrado')
+    }
   }
 
   return {
-    count, dispatch, user, showModal, setShowModal, userId, setUserId, handleGetUser
+    count, dispatch, user, showModal, setShowModal, handleGetUser
   }
 
 }
