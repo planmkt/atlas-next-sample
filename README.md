@@ -4,7 +4,7 @@ Esse projeto servirá de base para os futuros sites da Atlas, que serão desenvo
 
 ## Inicialização:
 
-Após realizar o clone do projeto e instalar as dependências (npm install ou yarn), certifique-se de ter copiado o arquivo env.example para um novo arquivo chamado env.local. 
+Após realizar o clone do projeto e instalar as dependências (npm install ou yarn), certifique-se de ter copiado o arquivo env.example para um novo arquivo chamado env.local.
 Obs: A versão do Node utilizada atualmente é a 18.13.0.
 
 ## Para rodar o projeto:
@@ -41,16 +41,16 @@ ou
 pnpm create next-app [nome-do-projeto] -e https://github.com/planmkt/atlas-next-sample.git
 ```
 
-## Documentação da ferramenta:
+## Documentação da framework:
 
 Para mais informações sobre desenvolvimento e configuração de projetos em Next.js, consulte as principais documentações:
 
-- [Sobre o React](https://react.dev/learn)
+- [Sobre o React](https://react.dev/learn);
 - [Documentação do React](https://react.dev/reference/react);
-- [Sobre o next](https://nextjs.org/learn/foundations/about-nextjs)
+- [Sobre o next](https://nextjs.org/learn/foundations/about-nextjs);
 - [Documentação do next.js](https://nextjs.org/docs);
 
-## Bibliotecas já configuranas no template:
+## Bibliotecas já configuradas no template:
 
 - [reduxjs/toolkit](https://redux-toolkit.js.org/) - Para o gerenciamento de estados;
 - [redux-saga](https://redux-saga.js.org/) - Para o gerenciamento de requisições assíncronas;
