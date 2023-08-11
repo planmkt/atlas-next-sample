@@ -33,10 +33,10 @@ export default function Home() {
           <Modal.Content>
             {user?.login &&
               <div className='flex flex-col justify-center content-center p-5'>
-                <img className='m-auto rounded-full w-32' src={user.avatar_url} alt={user.name} />
+                <img className='m-auto rounded-full w-32' src={user.avatarUrl} alt={user.name} />
                 <h3 className='m-auto text-xl text-blue_intermediate font-semibold'>{user.name}</h3>
-                <a target="_blank" href={user.html_url} className='m-auto hover:text-blue_light' rel="noreferrer">{user.login}</a>
-                <p className='m-auto'>Criado em: {user.created_at}</p>
+                <a target="_blank" href={user.htmlUrl} className='m-auto hover:text-blue_light' rel="noreferrer">{user.login}</a>
+                <p className='m-auto'>Criado em: {user.createdAt}</p>
               </div>
             }
             {!user?.login &&

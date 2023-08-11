@@ -62,10 +62,12 @@ Para mais informações sobre desenvolvimento e configuração de projetos em Ne
 - [react-tostify](https://fkhadra.github.io/react-toastify/introduction) - Para a exibição de erros e exceções;
 - [tailwindcss](https://tailwindcss.com/) - Para a estilização.
 
-Boas práticas:
+## Boas práticas:
+
 - Os componentes serão desenvolvidos seguindo os conceitos do composition pattern;
+- Caso esteja utilizando o vscode busque utilizar os plugins recomendados;
 - Busque configurações de "format on save" com o eslint e editorconfig em sua IDE para manter o código organizado e evitar problemas com conflitos de merge;
 - Evite a utilização do tipo "any" em suas implementações;
 - Respeite a configuração de pastas e a organização do projeto, dando prioridade à criação de services e hooks personalizados (com exceção dos server components);
 - Sempre busque modularizar a estilização, evitando classes globais, a menos que sejam estritamente necessárias.
-
+- Tenha uma visão crítica sobre seu código, crie componentes sempre que necessário da melhor forma para que possam ser reaproveitados no futuro e sempre classifique o mesmo como sendo client side ou server side de acordo com sua função.
